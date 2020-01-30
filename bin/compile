@@ -48,10 +48,10 @@ export ENV_DIR=$3
 # cd $curr_dir
 
 if [[ -f "$ENV_DIR/SECRET_KEY" ]]; then
-  export SECRET_KEY=(cat "$ENV_DIR/BUILDPACK_RUN")
+  export SECRET_KEY=$(cat "$ENV_DIR/BUILDPACK_RUN")
 
 if [[ -f "$ENV_DIR/DATABASE_URL" ]]; then
-  export DATABASE_URL=(cat "$ENV_DIR/DATABASE_URL")
+  export DATABASE_URL=$(cat "$ENV_DIR/DATABASE_URL")
 
 
 # Extract commands from BUILDPACK_RUN config variable

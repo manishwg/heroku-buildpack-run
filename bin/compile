@@ -38,7 +38,21 @@ export BUILD_DIR=$1
 export CACHE_DIR=$2
 export ENV_DIR=$3
 
-cd "$BUILD_DIR"
+# cd "$BUILD_DIR"
+
+# export curr_dir=$(pwd)
+
+# for e in $(ENV_DIR):   
+#    expoert $(e)=$(cat e)
+
+# cd $curr_dir
+
+if [[ -f "$ENV_DIR/SECRET_KEY" ]]; then
+  export SECRET_KEY=(cat "$ENV_DIR/BUILDPACK_RUN")
+
+if [[ -f "$ENV_DIR/DATABASE_URL" ]]; then
+  export DATABASE_URL=(cat "$ENV_DIR/DATABASE_URL")
+
 
 # Extract commands from BUILDPACK_RUN config variable
 if [[ -f "$ENV_DIR/BUILDPACK_RUN" ]]; then

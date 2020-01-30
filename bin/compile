@@ -89,4 +89,3 @@ for c in ${COMMANDS[@]}; do
 done
 
 exit 0
-

@@ -38,7 +38,7 @@ export BUILD_DIR=$1
 export CACHE_DIR=$2
 export ENV_DIR=$3
 
-# cd "$BUILD_DIR"
+cd "$BUILD_DIR"
 
 # export curr_dir=$(pwd)
 
